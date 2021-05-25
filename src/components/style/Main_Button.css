@@ -3,21 +3,21 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    border: 2px solid white;
+    border: 2px solid rgb(65, 65, 65);
     border-radius: 40px;
     margin-top: 2em;
-    background-color: rgba(133,133,133,0.2);
+    background-color: rgba(75, 0, 130, 0.527);
 }
 
 .Main_Button p{
-    color: white;
+    color: black;
     font-size: 1.2em;
     margin: 8px 60px;
     padding-top: 5px;
 }
 
 .Main_Button:hover{
-    background-color: white;
+    background-color: rgba(156,244,168,0.3);
     border:2px solid teal;
     font-weight: bold;
 }
