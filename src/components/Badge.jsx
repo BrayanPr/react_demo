@@ -13,28 +13,28 @@ class Badge extends React.Component {
                     </div>
                     <div className="Badge__userInfo container mt-5 mb1 ">
                         <div className="Badge__userImage">
-                            <img src={ProfilePic} alt="profile_pic" />
+                            <img src={this.props.ProfilePic} alt="profile_pic" />
                         </div>
                         <h4 className="text-center mt-5">
-                            Mike Miller <i>27</i>
+                            {this.props.Name} <i>{this.props.Age}</i>
                         </h4>
                         <p className="text-center">
-                            New York City
+                            {this.props.City}
                         </p>
                     </div>
                     
                     <div className="Badge__info container pt-3">
                         <div className="row">
                             <div className="col">
-                                <h4 className="text-center fw bold">5</h4>
+                                <h4 className="text-center fw bold">{this.props.Followers}</h4>
                                 <p className="text-center">followers</p>
                             </div>
                             <div className="col">
-                                <h4 className="text-center fw bold">15</h4>
+                                <h4 className="text-center fw bold">{this.props.Likes}</h4>
                                 <p className="text-center">likes</p>
                             </div>
                             <div className="col">
-                                <h4 className="text-center fw bold">20</h4>
+                                <h4 className="text-center fw bold">{this.props.Pictures}</h4>
                                 <p className="text-center">pictures</p>
                             </div>
                         </div>
