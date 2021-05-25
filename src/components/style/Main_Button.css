@@ -2,18 +2,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    border: 2px solid rgb(65, 65, 65);
-    border-radius: 40px;
-    margin-top: 2em;
+    text-decoration:none;
+    border: 1px solid rgb(65, 65, 65);
+    border-radius: 35px;
+    
     background-color: rgba(75, 0, 130, 0.527);
 }
 
 .Main_Button p{
     color: black;
     font-size: 1.2em;
-    margin: 8px 60px;
+    margin: 3px 30px;
     padding-top: 5px;
+    font-family:monospace;
 }
 
 .Main_Button:hover{
