@@ -1,7 +1,13 @@
-import Badge from './components/Badge'
+import React from "react"
+import Layout from "./pages/Layout/Layout"
+import Main from "./pages/Main/Main"
 function App() {
   return ( 
-  <Badge> </Badge>  
+  <React.Fragment>
+    <Layout>
+      <Main></Main>
+    </Layout>
+  </React.Fragment>  
   );
 }
 
