@@ -4,6 +4,7 @@ import "./NewBadge.css";
 import Badge from "../../components/Badge"
 import Form from "../../components/Form"
 import DefaultProfilePic from "../../images/no_image.png";
+import api from '../../libs/api';
 class NewBadge extends React.Component {
 
     state = {
@@ -32,6 +33,15 @@ class NewBadge extends React.Component {
 
     handleSubmit = async (event) => {
         event.preventDefault();
+        this.setState({loading:true, error:null})
+
+        try{
+            await api.badges.create(this.state.form)
+            this.setState({loading:false, error:null})
+            this.props.history.push("/")
+        }catch(error){
+            this.setState({loading:false, error: error})
+        }
     }
 
     render() {
