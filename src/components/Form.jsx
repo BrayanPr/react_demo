@@ -60,6 +60,7 @@ class Form extends React.Component{
                             value={this.props.FormValues.Header}
                             />
                         </div>
+                        
                         <button type="submit" className="Submit">Save</button>
                     </form>
                 </div>
