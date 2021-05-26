@@ -3,7 +3,7 @@ import Hero from "../../components/Hero";
 import "./NewBadge.css";
 import Badge from "../../components/Badge"
 import Form from "../../components/Form"
-
+import DefaultProfilePic from "../../images/no_image.png";
 class NewBadge extends React.Component {
 
     state = {
@@ -42,11 +42,11 @@ class NewBadge extends React.Component {
                     <div className="row">
                         <div className="col">
                             <Badge
-                            Header = {this.state.form.Header || "https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}
-                            ProfilePic = {this.state.form.ProfilePic || "https://images.pexels.com/photos/5372800/pexels-photo-5372800.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}
-                            Name = {this.state.form.Name || "Maria"}
-                            Age = {this.state.form.Age || "22"}
-                            City = {this.state.form.City || "New York"}
+                            Header = {this.state.form.Header || "https://i.pinimg.com/originals/55/f4/eb/55f4eb45819c90449bd02f84548104c1.jpg"}
+                            ProfilePic = {this.state.form.ProfilePic || DefaultProfilePic}
+                            Name = {this.state.form.Name || "Name Lastname"}
+                            Age = {this.state.form.Age || "Age"}
+                            City = {this.state.form.City || "City"}
                             Followers = {this.state.form.Followers || "0"}
                             Pictures = {this.state.form.Pictures || "0"}
                             Likes = {this.state.form.Likes || "0"}>
