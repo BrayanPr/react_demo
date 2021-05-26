@@ -7,8 +7,9 @@ class Form extends React.Component{
             <React.Fragment>
                 
                 <div className="form m-5">
-                <h1>Form</h1>
-                    <form onSubmit={this.props.onSubmit}>
+                
+                    <form className="Form" onSubmit={this.props.onSubmit}>
+                    <h1>Form</h1>
                         <div className="form-group mb-2">
                             <label className="mb-1"> Name </label>
                             <input 
@@ -49,7 +50,7 @@ class Form extends React.Component{
                             value={this.props.FormValues.Name}
                             />
                         </div>
-                        <button type="submit" className="LoginForm_Button">Save</button>
+                        <button type="submit" className="Submit">Save</button>
                     </form>
                 </div>
             </React.Fragment>
