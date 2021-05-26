@@ -9,13 +9,14 @@ class NewBadge extends React.Component {
         loading:false,
         error:null,
         form:{
+            Header:"",
             ProfilePic:"",
             Name:"", 
             Age:"",
             City:"",
             Followers:"",
             Likes:"",
-            Imagenes:"",
+            Pictures:"",
         }
     }
 
@@ -32,8 +33,15 @@ class NewBadge extends React.Component {
                 <div className="container">
                     <div className="col">
                         <Badge
+                        Header = {this.state.form.Header || "https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}
                         ProfilePic = {this.state.form.ProfilePic || "https://images.pexels.com/photos/5372800/pexels-photo-5372800.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}
-                        ></Badge>
+                        Name = {this.state.form.Name || "Maria"}
+                        Age = {this.state.form.Age || "22"}
+                        City = {this.state.form.City || "New York"}
+                        Followers = {this.state.form.Followers || "0"}
+                        Pictures = {this.state.form.Pictures || "0"}
+                        Likes = {this.state.form.Likes || "0"}
+                       ></Badge>
                     </div>
                     <div className="col">
 

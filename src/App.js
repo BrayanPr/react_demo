@@ -6,9 +6,9 @@ import NewBadge from "../src/pages/NewBadge/NewBadge"
 function App() {
   return ( 
   <React.Fragment>
-    <Layout>
+    
       <NewBadge></NewBadge>
-    </Layout>
+    
   </React.Fragment>  
   );
 }
