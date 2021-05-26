@@ -38,11 +38,11 @@ class NewBadge extends React.Component {
                             Followers = {this.state.form.Followers || "0"}
                             Pictures = {this.state.form.Pictures || "0"}
                             Likes = {this.state.form.Likes || "0"}>
-                                
+
                             </Badge>
                         </div>
                         <div className="col">
-                            <Form></Form>
+                            <Form FormValues={this.state.form}></Form>
                         </div>
                     </div>
                 </div>

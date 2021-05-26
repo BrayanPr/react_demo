@@ -5,7 +5,53 @@ class Form extends React.Component{
      render(){
          return(
             <React.Fragment>
+                
+                <div className="form m-5">
                 <h1>Form</h1>
+                    <form onSubmit={this.props.onSubmit}>
+                        <div className="form-group mb-2">
+                            <label className="mb-1"> Name </label>
+                            <input 
+                            type="text" 
+                            className="form-control"
+                            name="Name"
+                            onChange={this.props.onChange}
+                            value={this.props.FormValues.Name}
+                            />
+                        </div>
+                        <div className="form-group mb-2">
+                            <label className="mb-1"> Age </label>
+                            <input 
+                            type="text" 
+                            className="form-control"
+                            name="Age"
+                            onChange={this.props.onChange}
+                            value={this.props.FormValues.Age}
+                            />
+                        </div>
+                        <div className="form-group mb-2">
+                            <label className="mb-1"> City </label>
+                            <input 
+                            type="text" 
+                            className="form-control"
+                            name="City"
+                            onChange={this.props.onChange}
+                            value={this.props.FormValues.City}
+                            />
+                        </div>
+                        <div className="form-group mb-2">
+                            <label className="mb-1"> Name </label>
+                            <input 
+                            type="text" 
+                            className="form-control"
+                            name="Name"
+                            onChange={this.props.onChange}
+                            value={this.props.FormValues.Name}
+                            />
+                        </div>
+                        <button type="submit" className="LoginForm_Button">Save</button>
+                    </form>
+                </div>
             </React.Fragment>
          );
      }
