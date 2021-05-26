@@ -1,11 +1,15 @@
 import { render } from "@testing-library/react"
 import React from "react"
 import "./style/Error.css";
-import Error from "../images/404_error.png"
-const Error = () => {
+import ErrorImg from "../images/404_error.png";
+const Error404 = () => {
         return(
             <React.Fragment>
-                <img src="../" alt="" />
+                <div className="error">
+                    <img src={ErrorImg} alt="" />
+                </div>
+                
             </React.Fragment>
         )
     } 
+export default Error404

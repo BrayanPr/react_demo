@@ -1,0 +1,14 @@
+.error{
+    display: flex;
+    height:80vh;
+    align-self: center;
+    overflow: hidden;
+    position: absolute;
+    left: 100px;
+    z-index: 1;
+}
+.error img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
