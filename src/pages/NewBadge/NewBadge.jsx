@@ -21,6 +21,18 @@ class NewBadge extends React.Component {
         }
     }
 
+    handleChange = event => {
+        this.setState({
+            form:{
+                ... this.state.form,
+                [event.target.name]: event.target.value
+            }
+        })
+    }
+
+    handleSubmit = async (event) => {
+        
+    }
 
     render() {
         return(
@@ -42,7 +54,11 @@ class NewBadge extends React.Component {
                             </Badge>
                         </div>
                         <div className="col">
-                            <Form FormValues={this.state.form}></Form>
+                            <Form 
+                            FormValues={this.state.form}
+                            onSubmit={this.handleSubmit}
+                            onChange={this.handleChange}
+                            ></Form>
                         </div>
                     </div>
                 </div>

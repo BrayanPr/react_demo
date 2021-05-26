@@ -41,13 +41,23 @@ class Form extends React.Component{
                             />
                         </div>
                         <div className="form-group mb-2">
-                            <label className="mb-1"> Name </label>
+                            <label className="mb-1"> Profile picture URL</label>
                             <input 
                             type="text" 
                             className="form-control"
-                            name="Name"
+                            name="ProfilePic"
                             onChange={this.props.onChange}
-                            value={this.props.FormValues.Name}
+                            value={this.props.FormValues.ProfilePic}
+                            />
+                        </div>
+                        <div className="form-group mb-2">
+                            <label className="mb-1"> Header picture URL</label>
+                            <input 
+                            type="text" 
+                            className="form-control"
+                            name="Header"
+                            onChange={this.props.onChange}
+                            value={this.props.FormValues.Header}
                             />
                         </div>
                         <button type="submit" className="Submit">Save</button>
