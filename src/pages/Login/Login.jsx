@@ -5,7 +5,12 @@ import Form from "../../components/LoginForm"
 var Login = () =>{
     return(    
     <React.Fragment>
-       <Form></Form>
+        <div className="Main">
+            <div className="Main__content">
+                <Form></Form>
+            </div>
+            <Hero h={"88vh"}></Hero>
+        </div>
     </React.Fragment>
     );
     
