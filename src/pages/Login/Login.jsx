@@ -1,12 +1,12 @@
 import React  from "react"
 import "./Login.css"
-import Layout from "../Layout/Layout"
-import Form from "../../components/Form"
+import Hero from "../../components/Hero" 
+import Form from "../../components/LoginForm"
 var Login = () =>{
-    return(
-        <Layout>
-        <Form></Form>
-        </Layout>
+    return(    
+    <React.Fragment>
+       <Form></Form>
+    </React.Fragment>
     );
     
 }

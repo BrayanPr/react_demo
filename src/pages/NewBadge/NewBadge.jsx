@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from "../../components/Hero";
 import "./NewBadge.css";
 import Badge from "../../components/Badge"
-import Form from "../../components/Form"
+import Form from "../../components/NewBadgeForm"
 import DefaultProfilePic from "../../images/no_image.png";
 import api from '../../libs/api';
 class NewBadge extends React.Component {

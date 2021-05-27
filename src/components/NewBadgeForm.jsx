@@ -1,5 +1,5 @@
 import React from "react"
-import "./style/Form.css"
+import "./style/NewBadgeForm.css"
 
 class Form extends React.Component{
      render(){
