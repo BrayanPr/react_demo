@@ -10,7 +10,7 @@ class Form extends React.Component{
                        <div className="form-group mb-2">
                            <label className="mb-1"> email </label>
                            <input 
-                           type="text" 
+                           type="email" 
                            className="form-control"
                            name="Email"
                            />
@@ -18,7 +18,7 @@ class Form extends React.Component{
                        <div className="form-group mb-2">
                            <label className="mb-1"> password </label>
                            <input 
-                           type="text" 
+                           type="password" 
                            className="form-control"
                            name="Password"
                            />
