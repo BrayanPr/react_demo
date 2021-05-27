@@ -1,6 +1,5 @@
 import React from "react"
 import "./style/NewBadgeForm.css"
-
 class Form extends React.Component{
      render(){
          return(
@@ -8,7 +7,7 @@ class Form extends React.Component{
                 
                 <div className="form m-5">
                 
-                    <form className="Form" onSubmit={this.props.onSubmit}>
+                    <form className="BadgeForm" onSubmit={this.props.onSubmit}>
                     <h1>Form</h1>
                         <div className="form-group mb-2">
                             <label className="mb-1"> Name </label>

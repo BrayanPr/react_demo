@@ -1,7 +1,6 @@
 import React from 'react'
 import "./style/Badge.css"
-import ProfilePic from "../images/no_image.png";
-import HeaderBackground from "../images/HeaderBackgroundBadge.jpg";
+
 class Badge extends React.Component {
 
     render() {
