@@ -5,6 +5,8 @@ import Form from "../../components/RegisterForm"
 
 class Register  extends React.Component{
 
+
+    
     handleSubmit = async (event) => {
         event.preventDefault();
         this.setState({loading:true, error:null})
