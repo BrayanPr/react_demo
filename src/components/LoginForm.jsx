@@ -24,7 +24,7 @@ class Form extends React.Component{
                            />
                        </div>
                        
-                       <button type="submit" className="Submit">Save</button>
+                       <button type="submit" className="Submit">Log in</button>
                    </form>
                </div>
            </React.Fragment>
