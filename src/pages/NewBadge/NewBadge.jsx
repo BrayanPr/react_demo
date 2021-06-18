@@ -3,7 +3,6 @@ import Hero from "../../components/Hero";
 import "./NewBadge.css";
 import Badge from "../../components/Badge"
 import Form from "../../components/NewBadgeForm"
-import DefaultProfilePic from "../../images/no_image.png";
 import api from '../../libs/fetch';
 import PageError from "../../components/PageError"
 import Loader from "../../components/Loader"
@@ -65,7 +64,7 @@ class NewBadge extends React.Component {
                         <div className="col">
                             <Badge
                             header_img_url = {this.state.form.header_img_url || "https://i.pinimg.com/originals/55/f4/eb/55f4eb45819c90449bd02f84548104c1.jpg"}
-                            profile_picture_url = {this.state.form.profile_picture_url || DefaultProfilePic}
+                            profile_picture_url = {this.state.form.profile_picture_url || "https://img.icons8.com/windows/452/no-user.png"}
                             name = {this.state.form.name || "Name Lastname"}
                             age = {this.state.form.age || "Age"}
                             city = {this.state.form.city || "City"}
