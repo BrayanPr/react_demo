@@ -14,9 +14,9 @@ class Form extends React.Component{
                             <input 
                             type="text" 
                             className="form-control"
-                            name="Name"
+                            name="name"
                             onChange={this.props.onChange}
-                            value={this.props.FormValues.Name}
+                            value={this.props.FormValues.name}
                             />
                         </div>
                         <div className="form-group mb-2">
@@ -24,9 +24,9 @@ class Form extends React.Component{
                             <input 
                             type="text" 
                             className="form-control"
-                            name="Age"
+                            name="age"
                             onChange={this.props.onChange}
-                            value={this.props.FormValues.Age}
+                            value={this.props.FormValues.age}
                             />
                         </div>
                         <div className="form-group mb-2">
@@ -34,9 +34,9 @@ class Form extends React.Component{
                             <input 
                             type="text" 
                             className="form-control"
-                            name="City"
+                            name="city"
                             onChange={this.props.onChange}
-                            value={this.props.FormValues.City}
+                            value={this.props.FormValues.city}
                             />
                         </div>
                         <div className="form-group mb-2">
@@ -44,9 +44,9 @@ class Form extends React.Component{
                             <input 
                             type="text" 
                             className="form-control"
-                            name="ProfilePic"
+                            name="profile_picture_url"
                             onChange={this.props.onChange}
-                            value={this.props.FormValues.ProfilePic}
+                            value={this.props.FormValues.profile_picture_url}
                             />
                         </div>
                         <div className="form-group mb-2">
@@ -54,9 +54,9 @@ class Form extends React.Component{
                             <input 
                             type="text" 
                             className="form-control"
-                            name="Header"
+                            name="header_img_url"
                             onChange={this.props.onChange}
-                            value={this.props.FormValues.Header}
+                            value={this.props.FormValues.header_img_url}
                             />
                         </div>
                         

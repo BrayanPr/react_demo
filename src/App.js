@@ -7,6 +7,7 @@ import Error404 from "../src/components/Error"
 import Login from "../src/pages/Login/Login"
 import Register from "../src/pages/Register/Register"
 import Badges from "../src/pages/Badges/Badges"
+import Details from "../src/pages/Details/Details"
 function App() {
   return ( 
   <BrowserRouter>
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/login" component={Login}></Route>
         <Route exact path="/Register" component={Register}></Route>
         <Route exact path="/Badges" component={Badges}></Route>
+        <Route exact path="/:BadgeId" component={Details}></Route>
         <Route component={Error404}></Route>
       </Switch>
     </Layout>

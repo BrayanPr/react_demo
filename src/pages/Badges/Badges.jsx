@@ -1,7 +1,10 @@
 import React from "react"
-import api from "../../libs/api";
+import api from "../../libs/fetch";
 import './Badges.css'
-
+import SkeletonItem from "../../components/SkeletonItem"
+import BadgesList from "../../components/BadgesList"
+import Button from "../../components/Main_Button"
+import PageError from "../../components/PageError"
 class Badges extends React.Component{
     
     state={
@@ -12,7 +15,10 @@ class Badges extends React.Component{
 
     componentDidMount(){
         this.fetchData();
-        this.Interval();
+        if(this.state.data){
+            this.Interval();
+        }
+        
     }
 
     fetchData = async() =>{
@@ -22,7 +28,7 @@ class Badges extends React.Component{
             data.reverse()
             this.setState({loading:false, data:data})
         }catch(error){
-            this.setState({loading:false, error:error, data:[]})
+            this.setState({loading:false, error:error})
         }
     }
     
@@ -35,11 +41,29 @@ class Badges extends React.Component{
     }
 
     render(){
+        if(this.state.loading===true && !this.state.data){
+            return <SkeletonItem></SkeletonItem>
+        }
+
+        if(this.state.error){
+            return <PageError error={this.state.error.message}></PageError>
+        }
         return(
             <React.Fragment>
-             <h1>simon</h1>
+                <div className="Badges__container">
+                    <div className="Badges__button">
+                        <Button
+                        theme={"Button-light"}
+                        contentText={"New Badge"}
+                        Link={"/new"}
+                        >
+                        </Button>
+                    </div>
+                </div>
+                <BadgesList badges={this.state.data}></BadgesList>
             </React.Fragment>
         );
+        
     }
 }
 

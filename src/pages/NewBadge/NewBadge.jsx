@@ -4,21 +4,23 @@ import "./NewBadge.css";
 import Badge from "../../components/Badge"
 import Form from "../../components/NewBadgeForm"
 import DefaultProfilePic from "../../images/no_image.png";
-import api from '../../libs/api';
+import api from '../../libs/fetch';
+import PageError from "../../components/PageError"
+import Loader from "../../components/Loader"
 class NewBadge extends React.Component {
 
     state = {
         loading:false,
         error:null,
         form:{
-            Header:"",
-            ProfilePic:"",
-            Name:"", 
-            Age:"",
-            City:"",
-            Followers:"",
-            Likes:"",
-            Pictures:"",
+            header_img_url:"",
+            profile_picture_url:"",
+            name:"", 
+            age:"",
+            city:"",
+            followers:"",
+            likes:"",
+            post:"",
         }
     }
 
@@ -38,13 +40,23 @@ class NewBadge extends React.Component {
         try{
             await api.badges.create(this.state.form)
             this.setState({loading:false, error:null})
-            this.props.history.push("/")
+            this.props.history.push("/badges")
         }catch(error){
             this.setState({loading:false, error: error})
         }
     }
 
     render() {
+        if(this.state.loading){
+            return(
+                <Loader></Loader>
+            )
+        }
+        if(this.state.error){
+            return(
+                <PageError></PageError>
+            )
+        }
         return(
             <React.Fragment>
                 <Hero h={"15vh"}></Hero>
@@ -52,14 +64,14 @@ class NewBadge extends React.Component {
                     <div className="row">
                         <div className="col">
                             <Badge
-                            Header = {this.state.form.Header || "https://i.pinimg.com/originals/55/f4/eb/55f4eb45819c90449bd02f84548104c1.jpg"}
-                            ProfilePic = {this.state.form.ProfilePic || DefaultProfilePic}
-                            Name = {this.state.form.Name || "Name Lastname"}
-                            Age = {this.state.form.Age || "Age"}
-                            City = {this.state.form.City || "City"}
-                            Followers = {this.state.form.Followers || "0"}
-                            Pictures = {this.state.form.Pictures || "0"}
-                            Likes = {this.state.form.Likes || "0"}>
+                            header_img_url = {this.state.form.header_img_url || "https://i.pinimg.com/originals/55/f4/eb/55f4eb45819c90449bd02f84548104c1.jpg"}
+                            profile_picture_url = {this.state.form.profile_picture_url || DefaultProfilePic}
+                            name = {this.state.form.name || "Name Lastname"}
+                            age = {this.state.form.age || "Age"}
+                            city = {this.state.form.city || "City"}
+                            followers = {this.state.form.followers || "0"}
+                            post = {this.state.form.post || "0"}
+                            likes = {this.state.form.likes || "0"}>
 
                             </Badge>
                         </div>
